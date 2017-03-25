@@ -5,14 +5,14 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ErickWendel/Learning.NodeJSWithTypescript.git"
+    "url": "git+https://github.com/eswk22/Application.Core.git"
   },
-  "author": "erickwendel",
+  "author": "Eswaran Krishnamoorthy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript/issues"
+    "url": "https://github.com/eswk22/Application.Core/issues"
   },
-  "homepage": "https://github.com/ErickWendel/Learning.NodeJSWithTypescript#readme",
+  "homepage": "https://github.com/eswk22/Application.Core#readme",
   "devDependencies": {
     "body-parser": "^1.14.2",
     "clear": "0.0.1",
