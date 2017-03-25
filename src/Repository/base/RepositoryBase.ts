@@ -1,4 +1,4 @@
-   /// <reference path="../../typings/tsd.d.ts" />
+   /// <reference path="../../../typings/tsd.d.ts" />
 
 import IRead = require("./interfaces//Read");
 import IWrite = require("./interfaces/Write");

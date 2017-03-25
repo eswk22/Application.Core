@@ -3,7 +3,7 @@
     import Mongoose = require("mongoose");
     import Constants = require("./../config/constants/Constants");
     
-    class DataAccess {
+    export class DataAccess {
         static mongooseInstance: any;
         static mongooseConnection: Mongoose.Connection;
         
@@ -26,5 +26,4 @@
     }
     
     DataAccess.connect();
-    export = DataAccess;
      
