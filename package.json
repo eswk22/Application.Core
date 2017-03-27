@@ -32,6 +32,7 @@
     "gulp-typescript": "^3.1.6",
     "gulp-typescript-compiler": "^1.0.1",
     "gulp-util": "^3.0.8",
+    "merge2": "^1.0.3",
     "method-override": "^2.3.5",
     "mongojs": "^2.2.2",
     "mongoose": "^4.3.4"

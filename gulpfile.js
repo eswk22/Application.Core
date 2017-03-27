@@ -5,6 +5,7 @@ var rename = require("gulp-rename");
 var util = require("gulp-util");
 var docco = require("gulp-docco");
 var nodemon = require("gulp-nodemon");
+var merge = require('merge2'); 
 
 // pull in the project TypeScript config
 var tsProject = ts.createProject('tsconfig.json');
@@ -24,7 +25,10 @@ gulp.task('compile', () => {
    gulp.watch(tsGlob, function (event) {
       const tsResult = tsProject.src()
       .pipe(tsProject());
-      return tsResult.js.pipe(gulp.dest('lib'));
+       return merge([
+        tsResult.dts.pipe(gulp.dest('lib/definitions')),
+        tsResult.js.pipe(gulp.dest('lib/js'))
+    ]);
    });
 });
 
