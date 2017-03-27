@@ -1,4 +1,4 @@
-﻿export interface IUser {
+﻿interface IUser {
 	firstname: string,
 	lastname:string,
     email: string,
@@ -8,3 +8,5 @@
 	username:string
 	  
 };
+
+export let IUser;

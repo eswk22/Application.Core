@@ -1,4 +1,5 @@
-import {ISys_UserModel} from "./Sys_UserModel";
+import {ISys_UserModel} from "./ISys_UserModel";
+import * as mongooseRaw from 'mongoose';
 import { DataAccess} from '../dataAccess/DataAccess'; 
 var mongoose = DataAccess.mongooseInstance;
 var mongooseConnection = DataAccess.mongooseConnection;
@@ -6,12 +7,13 @@ export let Schema = mongoose.Schema;
 export let ObjectId = mongoose.Schema.Types.ObjectId;
 export let Mixed = mongoose.Schema.Types.Mixed;
 
+
 let schema = new Schema({
-  sys_created_by:
+  sys_created_by:  
   {
-      type: String
+      type: String 
   },
-  sys_created_on:
+  sys_created_on: 
   {
       type: Date
   },
@@ -267,10 +269,10 @@ let schema = new Schema({
   {
       type: String
   },
-  u_org:
-  {
+  u_org:         
+  { 
       type: String
   },
 });
-
-export let UserSchema = mongooseConnection.model<ISys_UserModel>('users', schema);
+  
+export let UserSchema =  mongooseConnection.model<ISys_UserModel>('users', schema);

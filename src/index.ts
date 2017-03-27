@@ -1,3 +1,3 @@
-    /// <reference path="../typings/tsd.d.ts" />
+    /// <reference path="../typings/index.d.ts" />;
 export * from './Repository/UserRepository';
-export * from './Account/Sys_UserModel'; 
+export * from './Account/ISys_UserModel'; 

@@ -1,4 +1,4 @@
-    /// <reference path="./../../typings/tsd.d.ts" />
+    /// <reference path="./../../typings/index.d.ts" />
 
     import Mongoose = require("mongoose");
     import Constants = require("./../config/constants/Constants");
@@ -8,8 +8,8 @@
         static mongooseConnection: Mongoose.Connection;
         
         constructor () {
-            DataAccess.connect();
-        }
+            DataAccess.connect(); 
+        }  
         
         static connect (): Mongoose.Connection {
             if(this.mongooseInstance) return this.mongooseInstance;
