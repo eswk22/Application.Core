@@ -1,4 +1,7 @@
-export interface ISys_User{
+/// <reference path="../../../typings/index.d.ts" />;
+import * as mongoose from 'mongoose';
+
+export interface ISys_User extends mongoose.Document {
   sys_created_by : String,
   sys_created_on : Date,
   sys_is_deleted : String,
@@ -6,12 +9,12 @@ export interface ISys_User{
   sys_org : String,
   sys_updated_by : String,
   sys_updated_on : Date,
-  address1 : String,
-  address2 : String, 
-  answer1 : String, 
+  address1 : String, 
+  address2 : String,
+  answer1 : String,
   answer2 : String,
   answer3 : String,
-  building : String, 
+  building : String,
   calendar_integration : Number,
   city : String,
   company : String,

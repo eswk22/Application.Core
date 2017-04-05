@@ -1,9 +1,12 @@
 import mongoose = require("mongoose");
-interface Write<T> {
-    create: (item:T, callback: (error: any, result: any ) => void) => void;
-    update:(_id: mongoose.Types.ObjectId, item:T, callback: (error: any, result: any)=> void) => void ;
-    delete: (_id: string, callback: (error: any, result: any) => void) => void;
-    
+
+interface IWrite<T extends mongoose.Document> {
+  create: (item: any, callback?: (error: any, result: T) => void) => Promise<T>;
+  save: (item: T, callback?: (error: any, result: T) => void) => Promise<T>;
+  upsert: (cond: any, item: T, callback?: (error: any, result: T) => void) => Promise<T>;
+  delete: (_id: string, callback?: (error: any) => void) => Promise<boolean>;
+  deleteAll: (callback?: (error: any) => void) => Promise<boolean>;
+  deleteAllItems: (items: T[], callback?: (error: any) => void) => Promise<boolean>;
 }
 
-export = Write;
+export = IWrite;

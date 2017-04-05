@@ -1,4 +1,4 @@
-import {ISys_UserModel} from "./ISys_UserModel";
+import {ISys_User} from "./interfaces/ISys_User";
 import * as mongooseRaw from 'mongoose';
 import { DataAccess} from '../dataAccess/DataAccess'; 
 var mongoose = DataAccess.mongooseInstance;
@@ -274,5 +274,15 @@ let schema = new Schema({
       type: String
   },
 });
+schema.pre("create",next => {
+    let now = new Date();
+    let id = new mongoose.Types.ObjectId();
+    if (!this.sys_created_on) {
+        this.sys_created_on = now;
+    }
+    if(this._id) {
+        this._id = id;
+    }
+});
   
-export let UserSchema =  mongooseConnection.model<ISys_UserModel>('users', schema);
+export let UserSchema =  mongooseConnection.model<ISys_User>('users', schema);

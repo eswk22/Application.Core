@@ -1,3 +1,4 @@
     /// <reference path="../typings/index.d.ts" />;
-export * from './Repository/UserRepository';
-export * from './Account/ISys_UserModel'; 
+export * from './Repository/user-repository';
+export * from './Account/interfaces/ISys_User'; 
+export * from './Account/Sys_User'; 
