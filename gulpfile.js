@@ -78,7 +78,14 @@ gulp.task('watch:scripts', () => {
    gulp.watch(tsGlob, function (event) {
       const tsResult = tsProject.src()
       .pipe(tsProject());
-      return tsResult.js.pipe(gulp.dest('dist'));
+   return merge2([ // Merge the two output streams, so this task is finished when the IO of both operations are done. 
+		    tsResult.dts
+        .pipe(gulp_sourcemaps.write(sourcemapsConfig))
+        .pipe(gulp.dest('lib/definitions')),
+		     tsResult.js
+        .pipe(gulp_sourcemaps.write(sourcemapsConfig))
+        .pipe(gulp.dest('lib/js'))
+	]);
    });
 
   

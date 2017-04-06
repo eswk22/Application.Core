@@ -13,6 +13,7 @@
     "noEmitOnError": false,
     "declaration": true,
     "importHelpers": true,
+    "removeComments": true,
     "strictNullChecks": false,
     "lib": [
       "dom",
