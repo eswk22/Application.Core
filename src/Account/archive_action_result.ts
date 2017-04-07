@@ -1,0 +1,30 @@
+/// <reference path="./../../typings/index.d.ts" />;
+import * as mongoose from 'mongoose';
+
+export interface Archive_Action_Result extends mongoose.Document {
+  u_address : String,
+  u_completion : String,
+  u_condition : String,
+  u_duration : Number,
+  u_esbaddr : String,
+  u_severity : String,
+  u_timestamp : Number,
+  sys_created_by : String,
+  sys_created_on : Date,
+  sys_mod_count : Number,
+  sys_updated_by : String,
+  sys_updated_on : Date,
+  u_action_result_lob : String,
+  u_execute_request : String,
+  u_execute_result : String,
+  u_problem : String,
+  u_process : String,
+  u_target : String,
+  u_actiontask : String,
+  sys_is_deleted : String,
+  sys_org : String,
+  u_hidden : Boolean,
+  u_node_id : String,
+  u_target_guid : String,
+  u_wiki : String,
+};

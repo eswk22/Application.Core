@@ -1,0 +1,30 @@
+/// <reference path="./../../typings/index.d.ts" />;
+import * as mongoose from 'mongoose';
+
+export interface Resolve_Index_Log extends mongoose.Document {
+  u_component_avg_rating : Number,
+  u_component_description : String,
+  u_component_sys_id : String,
+  u_component_name : String,
+  u_component_parent_sys_id : String,
+  u_component_parent_name : String,
+  u_component_parent_type : String,
+  u_component_rating_boost : Number,
+  u_component_title : String,
+  u_component_type : String,
+  u_component_updated_by : String,
+  u_component_updated_on : Date,
+  u_content_to_index : String,
+  UHasActiveModel : Boolean,
+  u_should_delete : String,
+  u_should_index : String,
+  u_tags : String,
+  u_view_count : Number,
+  u_view_roles : String,
+  summary : String,
+  sys_created_by : String,
+  sys_created_on : Date,
+  sys_mod_count : Number,
+  sys_updated_by : String,
+  sys_updated_on : Date,
+};

@@ -1,5 +1,5 @@
     /// <reference path="./../../typings/index.d.ts" />
-    import logger = require("application.common");
+    import logger = require("application.common/lib/js/logger/logger");
     import Mongoose = require("mongoose");
     import Constants = require("./../config/constants/Constants");
     
@@ -16,7 +16,7 @@
             
             this.mongooseConnection  = Mongoose.connection;
             this.mongooseConnection.once("open", () => {              
-               logger.debug("Connectd to mongodb.");
+               logger.warn("Connectd to mongodb.");
             });
 
             // CONNECTION EVENTS
